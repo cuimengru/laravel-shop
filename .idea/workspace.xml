@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d5a5c1b7-1578-4e7f-9155-399492818bec" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +39,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591941539267</updated>
-      <workItem from="1591941540721" duration="2512000" />
+      <workItem from="1591941540721" duration="2738000" />
     </task>
     <servers />
   </component>
@@ -50,5 +51,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="374" y="248" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591944290741" />
+    <state x="917" y="875" key="NewPhpFileDialog" timestamp="1591945834272">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="917" y="875" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591945834272" />
   </component>
 </project>
