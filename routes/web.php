@@ -2,4 +2,5 @@
 
 Route::get('/', 'PagesController@root')->name('root');
 
-Auth::routes();
+// 在之前的路由里加上一个 verify 参数,邮箱验证
+Auth::routes(['verify' => true]);
