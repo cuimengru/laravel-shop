@@ -3,8 +3,7 @@
 Route::redirect('/', '/products')->name('root');
 //商品列表页
 Route::get('products', 'ProductsController@index')->name('products.index');
-//商品详情页
-Route::get('products/{product}', 'ProductsController@show')->name('products.show');
+
 
 // 在之前的路由里加上一个 verify 参数,邮箱验证
 Auth::routes(['verify' => true]);
@@ -27,4 +26,8 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
     Route::post('products/{product}/favorite', 'ProductsController@favor')->name('products.favor');
     //取消收藏
     Route::delete('products/{product}/favorite', 'ProductsController@disfavor')->name('products.disfavor');
+    //收藏列表
+    Route::get('products/favorites', 'ProductsController@favorites')->name('products.favorites');
 });
+//商品详情页
+Route::get('products/{product}', 'ProductsController@show')->name('products.show');
