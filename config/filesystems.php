@@ -49,10 +49,15 @@ return [
         ],
 
         'public' => [
-            'driver' => 'local',
+            /*'driver' => 'local',
             'root' => storage_path('app/public'),
             'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',*/
+            'driver'=>'local',
+            'root'       => storage_path('app/public/upload'),
+            'url' => env('APP_URL').'/upload',
             'visibility' => 'public',
+
         ],
 
         's3' => [
@@ -64,11 +69,11 @@ return [
             'url' => env('AWS_URL'),
             'endpoint' => env('AWS_ENDPOINT'),
         ],
-        'admin' => [
+       'admin' => [
             'driver'     => 'local',
             'root'       => public_path('upload'),
             'visibility' => 'public',
-            'url' => env('APP_URL').'/public/upload/',
+            'url' => env('APP_URL').'/upload',
         ],
 
     ],
