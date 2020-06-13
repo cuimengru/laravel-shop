@@ -9,6 +9,14 @@ use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
+    protected $cartService;
+
+    // 利用 Laravel 的自动解析功能注入 CartService 类
+    public function __construct(CartService $cartService)
+    {
+        $this->cartService = $cartService;
+    }
+
     //添加商品到购物车
     public function add(AddCartRequest $request)
     {
@@ -44,7 +52,7 @@ class CartController extends Controller
 
     //移除购物车中的商品
     public function remove(ProductSku $sku,Request $request){
-        $request->user()->cartItems()->where('product_sku_id', $sku->id)->delete();
+        $this->cartService->remove($sku->id);
         return [];
     }
 }

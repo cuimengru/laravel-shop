@@ -2,29 +2,35 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Jobs\CloseOrder;
-use App\Exceptions\InvalidRequestException;
 use App\Http\Requests\OrderRequest;
-use App\Models\ProductSku;
 use App\Models\UserAddress;
 use App\Models\Order;
-use Carbon\Carbon;
+use Illuminate\Http\Request;
+use App\Services\OrderService;
 
 class OrdersController extends Controller
 {
+    public function store(OrderRequest $request, OrderService $orderService)
+    {
+        $user = $request->user();
+        $address = UserAddress::find($request->input('address_id'));
+
+        return $orderService->store($user, $address, $request->input('remark'), $request->input('items'));
+    }
     //创建订单逻辑
-    public function store(OrderRequest $request)
+    // 利用 Laravel 的自动解析功能注入 CartService 类
+    /*public function store(OrderRequest $request, OrderService $orderService)
     {
         $user = $request->user();
         //开启一个数据库事务
-        $order = \DB::transaction(function () use ($user, $request) {
+        // 别忘了把 $cartService 加入 use 中
+        $order = \DB::transaction(function () use ($user, $request, $cartService) {
             $address = UserAddress::find($request->input('address_id'));
            //更新此地址的最后使用时间
             $address->update(['last_used_at' => Carbon::now()]);
             //创建一个订单
             $order   = new Order([
-                'address'      => [ // 将地址信息放入订单中
+                    'address'      => [ // 将地址信息放入订单中
                     'address'       => $address->full_address,
                     'zip'           => $address->zip,
                     'contact_name'  => $address->contact_name,
@@ -60,15 +66,15 @@ class OrdersController extends Controller
             $order->update(['total_amount' => $totalAmount]);
 
             // 将下单的商品从购物车中移除
-            $skuIds = collect($items)->pluck('sku_id');
-            $user->cartItems()->whereIn('product_sku_id', $skuIds)->delete();
+            $skuIds = collect($request->input('items'))->pluck('sku_id')->all();
+            $cartService->remove($skuIds);
 
             return $order;
         });
         $this->dispatch(new CloseOrder($order, config('app.order_ttl')));
 
         return $order;
-    }
+    }*/
 
     //订单列表页
     public function index(Request $request)
