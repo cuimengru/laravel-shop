@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d5a5c1b7-1578-4e7f-9155-399492818bec" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/ProductSku.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ProductSku.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cart/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cart/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +150,7 @@
       <updated>1591941539267</updated>
       <workItem from="1591941540721" duration="14575000" />
       <workItem from="1592009168665" duration="12649000" />
-      <workItem from="1592029882039" duration="6443000" />
+      <workItem from="1592029882039" duration="11608000" />
     </task>
     <servers />
   </component>

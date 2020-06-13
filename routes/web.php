@@ -34,6 +34,8 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
     Route::get('cart', 'CartController@index')->name('cart.index');
     //移除购物车中的商品
     Route::delete('cart/{sku}', 'CartController@remove')->name('cart.remove');
+    //订单
+    Route::post('orders', 'OrdersController@store')->name('orders.store');
 });
 //商品详情页
 Route::get('products/{product}', 'ProductsController@show')->name('products.show');
