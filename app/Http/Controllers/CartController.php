@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ProductSku;
-use App\Http\Requests\AddCartRequest;
-use App\Models\CartItem;
 use Illuminate\Http\Request;
+use App\Http\Requests\AddCartRequest;
+use App\Models\ProductSku;
+use App\Services\CartService;
 
 class CartController extends Controller
 {
     protected $cartService;
+
 
     // 利用 Laravel 的自动解析功能注入 CartService 类
     public function __construct(CartService $cartService)
@@ -17,10 +18,21 @@ class CartController extends Controller
         $this->cartService = $cartService;
     }
 
+    //查看购物车
+    public function index(Request $request)
+    {
+        //with(['productSku.product']) 方法用来预加载购物车里的商品和 SKU 信息
+        //$cartItems = $request->user()->cartItems()->with(['productSku.product'])->get();
+        $cartItems = $this->cartService->get();
+        //收货地址
+        $addresses = $request->user()->addresses()->orderBy('last_used_at', 'desc')->get();
+        return view('cart.index', ['cartItems' => $cartItems,'addresses' => $addresses]);
+    }
+
     //添加商品到购物车
     public function add(AddCartRequest $request)
     {
-        $user = $request->user();
+        /*$user = $request->user();
         $skuId = $request->input('sku_id');
         $amount = $request->input('amount');
 
@@ -36,18 +48,9 @@ class CartController extends Controller
             $cart->user()->associate($user);
             $cart->productSku()->associate($skuId);
             $cart->save();
-        }
+        }*/
+        $this->cartService->add($request->input('sku_id'), $request->input('amount'));
         return [];
-    }
-
-    //查看购物车
-    public function index(Request $request)
-    {
-        //with(['productSku.product']) 方法用来预加载购物车里的商品和 SKU 信息
-        $cartItems = $request->user()->cartItems()->with(['productSku.product'])->get();
-        //收货地址
-        $addresses = $request->user()->addresses()->orderBy('last_used_at', 'desc')->get();
-        return view('cart.index', ['cartItems' => $cartItems,'addresses' => $addresses]);
     }
 
     //移除购物车中的商品
@@ -55,4 +58,6 @@ class CartController extends Controller
         $this->cartService->remove($sku->id);
         return [];
     }
+
+
 }

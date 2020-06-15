@@ -10,6 +10,7 @@ use App\Services\OrderService;
 
 class OrdersController extends Controller
 {
+    // 利用 Laravel 的自动解析功能注入 CartService 类
     public function store(OrderRequest $request, OrderService $orderService)
     {
         $user = $request->user();
@@ -19,7 +20,7 @@ class OrdersController extends Controller
     }
     //创建订单逻辑
     // 利用 Laravel 的自动解析功能注入 CartService 类
-    /*public function store(OrderRequest $request, OrderService $orderService)
+   /* public function store(OrderRequest $request, CartService $cartService)
     {
         $user = $request->user();
         //开启一个数据库事务
