@@ -91,6 +91,12 @@ class Order extends Model
         return $this->hasMany(OrderItem::class);
     }
 
+    //关联优惠券
+    public function couponCode()
+    {
+        return $this->belongsTo(CouponCode::class);
+    }
+
     //生成订单号
     public static function findAvailableNo()
     {
