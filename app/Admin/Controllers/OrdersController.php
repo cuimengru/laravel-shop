@@ -13,7 +13,7 @@ use Encore\Admin\Grid;
 class OrdersController extends AdminController
 {
     use ValidatesRequests;
-    
+
     /**
      * Title for current resource.
      *
@@ -98,4 +98,6 @@ class OrdersController extends AdminController
         // 返回上一页
         return redirect()->back();
     }
+
+
 }
