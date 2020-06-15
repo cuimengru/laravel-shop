@@ -40,15 +40,13 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
     Route::get('orders', 'OrdersController@index')->name('orders.index');
     //订单详情页
     Route::get('orders/{order}', 'OrdersController@show')->name('orders.show');
-
-    Route::get('alipay', function() {
-        return app('alipay')->web([
-            'out_trade_no' => time(),
-            'total_amount' => '1',
-            'subject' => 'test subject - 测试',
-        ]);
-    });
+    //支付宝页面
+    Route::get('payment/{order}/alipay', 'PaymentController@payByAlipay')->name('payment.alipay');
+    //支付宝前端回调
+    Route::get('payment/alipay/return', 'PaymentController@alipayReturn')->name('payment.alipay.return');
 });
+//支付宝服务器端回调
+Route::post('payment/alipay/notify', 'PaymentController@alipayNotify')->name('payment.alipay.notify');
 //商品详情页
 Route::get('products/{product}', 'ProductsController@show')->name('products.show');
 
