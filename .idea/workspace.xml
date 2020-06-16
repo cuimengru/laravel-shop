@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d5a5c1b7-1578-4e7f-9155-399492818bec" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/OrderFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/OrderFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/OrderItemFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/OrderItemFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +169,8 @@
       <workItem from="1591941540721" duration="14575000" />
       <workItem from="1592009168665" duration="12649000" />
       <workItem from="1592029882039" duration="15777000" />
-      <workItem from="1592182629794" duration="22475000" />
+      <workItem from="1592182629794" duration="23783000" />
+      <workItem from="1592267249825" duration="1660000" />
     </task>
     <servers />
   </component>
