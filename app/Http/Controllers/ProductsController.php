@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\CategoryService;
 use App\Models\Category;
 use App\Models\OrderItem;
 use App\Models\Product;
@@ -11,7 +12,8 @@ use App\Exceptions\InvalidRequestException;
 class ProductsController extends Controller
 {
     //商品列表页
-    public function index(Request $request){
+    // 使用 Laravel 的依赖注入，自动创建 $categoryService 对象
+    public function index(Request $request, CategoryService $categoryService){
         //构建一个查询构造器,//where('on_sale', true) 筛选出 on_sale 字段为 true 的记录，这样未上架的商品就不会被展示出来
         $builder = Product::query()->where('on_sale',true);
         //判断是否有提交 search 参数，如果有就赋值给 $search 变
@@ -67,6 +69,8 @@ class ProductsController extends Controller
                 ],
                 // 等价于 isset($category) ? $category : null
                 'category' => $category ?? null,
+                // 将类目树传递给模板文件
+                'categoryTree' => $categoryService->getCategoryTree(),
             ]);
     }
 
