@@ -18,7 +18,7 @@ class UserAddress extends Model
         'last_used_at',
     ];
     protected $dates = ['last_used_at'];
-
+    protected $appends = ['full_address'];
     //关联user表，一个地址只属于一个用户
     public function user(){
         return $this->belongsTo(User::class);

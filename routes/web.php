@@ -56,6 +56,8 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
     Route::post('payment/wechat/refund_notify', 'PaymentController@wechatRefundNotify')->name('payment.wechat.refund_notify');
     //优惠券
     Route::get('coupon_codes/{code}', 'CouponCodesController@show')->name('coupon_codes.show');
+    //众筹商品
+    Route::post('crowdfunding_orders', 'OrdersController@crowdfunding')->name('crowdfunding_orders.store');
 
 });
 //支付宝服务器端回调
