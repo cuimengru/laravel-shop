@@ -26,3 +26,15 @@
 
 2020-06-16T06:26:12.057398+00:00 > yansongda.pay.DEBUG > Result Of Wechat Api {"return_code":"FAIL","return_msg":"mch_id参数格式错误"} 
 
+2020-06-16T09:07:58.884291+00:00 > yansongda.pay.DEBUG > Starting To Wechat ["scan",{"out_trade_no":"20200616085640707226","total_fee":840100.0,"body":"支付 Laravel Shop 的订单：20200616085640707226"}] 
+
+2020-06-16T09:07:58.901924+00:00 > yansongda.pay.INFO > Wechat Scan Has Started ["https://api.mch.weixin.qq.com/",{"appid":"wx*******","mch_id":"14*****","nonce_str":"8yGgl8WOmKFBLBOe","notify_url":"http://21ca5a19dea9.ngrok.io/payment/wechat/notify","spbill_create_ip":"192.168.10.10","out_trade_no":"20200616085640707226","total_fee":840100.0,"body":"支付 Laravel Shop 的订单：20200616085640707226","trade_type":"NATIVE"}] 
+
+2020-06-16T09:07:58.903354+00:00 > yansongda.pay.DEBUG > Wechat Generate Sign Content Before Trim [{"appid":"wx*******","body":"支付 Laravel Shop 的订单：20200616085640707226","mch_id":"14*****","nonce_str":"8yGgl8WOmKFBLBOe","notify_url":"http://21ca5a19dea9.ngrok.io/payment/wechat/notify","out_trade_no":"20200616085640707226","spbill_create_ip":"192.168.10.10","total_fee":840100.0,"trade_type":"NATIVE"},"appid=wx*******&body=支付 Laravel Shop 的订单：20200616085640707226&mch_id=14*****&nonce_str=8yGgl8WOmKFBLBOe&notify_url=http://21ca5a19dea9.ngrok.io/payment/wechat/notify&out_trade_no=20200616085640707226&spbill_create_ip=192.168.10.10&total_fee=840100&trade_type=NATIVE&"] 
+
+2020-06-16T09:07:58.903675+00:00 > yansongda.pay.DEBUG > Wechat Generate Sign Before UPPER [{"appid":"wx*******","body":"支付 Laravel Shop 的订单：20200616085640707226","mch_id":"14*****","nonce_str":"8yGgl8WOmKFBLBOe","notify_url":"http://21ca5a19dea9.ngrok.io/payment/wechat/notify","out_trade_no":"20200616085640707226","spbill_create_ip":"192.168.10.10","total_fee":840100.0,"trade_type":"NATIVE"},"f641de993b9b4ea127fb2a5af763d7a9"] 
+
+2020-06-16T09:07:58.908006+00:00 > yansongda.pay.INFO > Wechat PreOrder Method Has Called ["",{"appid":"wx*******","mch_id":"14*****","nonce_str":"8yGgl8WOmKFBLBOe","notify_url":"http://21ca5a19dea9.ngrok.io/payment/wechat/notify","spbill_create_ip":"192.168.10.10","out_trade_no":"20200616085640707226","total_fee":840100.0,"body":"支付 Laravel Shop 的订单：20200616085640707226","trade_type":"NATIVE","sign":"F641DE993B9B4EA127FB2A5AF763D7A9"}] 
+
+2020-06-16T09:07:58.911718+00:00 > yansongda.pay.DEBUG > Requesting To Wechat Api ["https://api.mch.weixin.qq.com/pay/unifiedorder",{"appid":"wx*******","mch_id":"14*****","nonce_str":"8yGgl8WOmKFBLBOe","notify_url":"http://21ca5a19dea9.ngrok.io/payment/wechat/notify","spbill_create_ip":"192.168.10.10","out_trade_no":"20200616085640707226","total_fee":840100.0,"body":"支付 Laravel Shop 的订单：20200616085640707226","trade_type":"NATIVE","sign":"F641DE993B9B4EA127FB2A5AF763D7A9"}] 
+
