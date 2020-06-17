@@ -3509,3 +3509,72 @@
 #43 /home/vagrant/Code/laravel-shop/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #44 {main}
 "} 
+[2020-06-17 01:02:33] local.WARNING: Curl exception encountered.  
+[2020-06-17 01:02:33] local.DEBUG: Request Body [null] 
+[2020-06-17 01:02:33] local.WARNING: Request Failure: {"method":"GET","uri":"http://localhost/","port":0,"headers":{"Host":["localhost"],"Content-Type":["application/json"],"Accept":["application/json"],"User-Agent":["elasticsearch-php/7.7.0 (Linux 4.15.0-64-generic; PHP 7.3.9-1+ubuntu18.04.1+deb.sury.org+1)"]},"HTTP code":null,"duration":0.02974,"error":"cURL error 7: Failed to connect to localhost port 9200: Connection refused"} 
+[2020-06-17 01:02:33] local.WARNING: Response [null] 
+[2020-06-17 01:02:33] local.WARNING: Marking node localhost dead.  
+[2020-06-17 01:02:33] local.WARNING: Retries left? true  
+[2020-06-17 01:02:33] local.CRITICAL: No alive nodes found in cluster  
+[2020-06-17 01:03:05] local.CRITICAL: No alive nodes found in cluster  
+[2020-06-17 01:08:32] local.WARNING: Curl exception encountered.  
+[2020-06-17 01:08:32] local.DEBUG: Request Body [null] 
+[2020-06-17 01:08:32] local.WARNING: Request Failure: {"method":"GET","uri":"http://localhost/","port":0,"headers":{"Host":["localhost"],"Content-Type":["application/json"],"Accept":["application/json"],"User-Agent":["elasticsearch-php/7.7.0 (Linux 4.15.0-64-generic; PHP 7.3.9-1+ubuntu18.04.1+deb.sury.org+1)"]},"HTTP code":null,"duration":0.004458,"error":"cURL error 7: Failed to connect to localhost port 9200: Connection refused"} 
+[2020-06-17 01:08:32] local.WARNING: Response [null] 
+[2020-06-17 01:08:32] local.WARNING: Marking node localhost dead.  
+[2020-06-17 01:08:32] local.WARNING: Retries left? false  
+[2020-06-17 01:08:32] local.WARNING: Out of retries, throwing exception from localhost  
+[2020-06-17 01:09:10] local.CRITICAL: No alive nodes found in cluster  
+[2020-06-17 01:10:11] local.WARNING: Curl exception encountered.  
+[2020-06-17 01:10:11] local.DEBUG: Request Body [null] 
+[2020-06-17 01:10:11] local.WARNING: Request Failure: {"method":"GET","uri":"http://localhost/","port":0,"headers":{"Host":["localhost"],"Content-Type":["application/json"],"Accept":["application/json"],"User-Agent":["elasticsearch-php/7.7.0 (Linux 4.15.0-64-generic; PHP 7.3.9-1+ubuntu18.04.1+deb.sury.org+1)"]},"HTTP code":null,"duration":0.004999,"error":"cURL error 7: Failed to connect to localhost port 9200: Connection refused"} 
+[2020-06-17 01:10:11] local.WARNING: Response [null] 
+[2020-06-17 01:10:11] local.WARNING: Marking node localhost dead.  
+[2020-06-17 01:10:11] local.WARNING: Retries left? true  
+[2020-06-17 01:10:11] local.CRITICAL: No alive nodes found in cluster  
+[2020-06-17 01:14:03] local.WARNING: Curl exception encountered.  
+[2020-06-17 01:14:03] local.DEBUG: Request Body [null] 
+[2020-06-17 01:14:03] local.WARNING: Request Failure: {"method":"GET","uri":"http://localhost/test_index/_doc/1","port":0,"headers":{"Host":["localhost"],"Content-Type":["application/json"],"Accept":["application/json"],"User-Agent":["elasticsearch-php/7.7.0 (Linux 4.15.0-64-generic; PHP 7.3.9-1+ubuntu18.04.1+deb.sury.org+1)"]},"HTTP code":null,"duration":0.004798,"error":"cURL error 7: Failed to connect to localhost port 9200: Connection refused"} 
+[2020-06-17 01:14:03] local.WARNING: Response [null] 
+[2020-06-17 01:14:03] local.WARNING: Marking node localhost dead.  
+[2020-06-17 01:14:03] local.WARNING: Retries left? false  
+[2020-06-17 01:14:03] local.WARNING: Out of retries, throwing exception from localhost  
+[2020-06-17 01:17:12] local.WARNING: Curl exception encountered.  
+[2020-06-17 01:17:12] local.DEBUG: Request Body [null] 
+[2020-06-17 01:17:12] local.WARNING: Request Failure: {"method":"GET","uri":"http://localhost:9200/","headers":{"Host":["localhost:9200"],"Content-Type":["application/json"],"Accept":["application/json"],"User-Agent":["elasticsearch-php/6.7.1 (Linux 4.15.0-64-generic, PHP 7.3.9-1+ubuntu18.04.1+deb.sury.org+1)"]},"HTTP code":null,"duration":0.030256,"error":"cURL error 7: Failed to connect to localhost port 9200: Connection refused"} 
+[2020-06-17 01:17:12] local.WARNING: Response [null] 
+[2020-06-17 01:17:12] local.WARNING: Marking node localhost:9200 dead.  
+[2020-06-17 01:17:12] local.WARNING: Retries left? true  
+[2020-06-17 01:17:12] local.CRITICAL: No alive nodes found in cluster  
+[2020-06-17 01:20:02] local.WARNING: Curl exception encountered.  
+[2020-06-17 01:20:02] local.DEBUG: Request Body [null] 
+[2020-06-17 01:20:02] local.WARNING: Request Failure: {"method":"GET","uri":"http://localhost:9200/","headers":{"Host":["localhost:9200"],"Content-Type":["application/json"],"Accept":["application/json"],"User-Agent":["elasticsearch-php/6.7.1 (Linux 4.15.0-64-generic, PHP 7.3.9-1+ubuntu18.04.1+deb.sury.org+1)"]},"HTTP code":null,"duration":0.004498,"error":"cURL error 7: Failed to connect to localhost port 9200: Connection refused"} 
+[2020-06-17 01:20:02] local.WARNING: Response [null] 
+[2020-06-17 01:20:02] local.WARNING: Marking node localhost:9200 dead.  
+[2020-06-17 01:20:02] local.WARNING: Retries left? false  
+[2020-06-17 01:20:02] local.WARNING: Out of retries, throwing exception from localhost:9200  
+[2020-06-17 01:20:56] local.CRITICAL: No alive nodes found in cluster  
+[2020-06-17 01:21:44] local.CRITICAL: No alive nodes found in cluster  
+[2020-06-17 01:21:47] local.CRITICAL: No alive nodes found in cluster  
+[2020-06-17 01:21:56] local.WARNING: Curl exception encountered.  
+[2020-06-17 01:21:56] local.DEBUG: Request Body [null] 
+[2020-06-17 01:21:56] local.WARNING: Request Failure: {"method":"GET","uri":"http://localhost:9200/","headers":{"Host":["localhost:9200"],"Content-Type":["application/json"],"Accept":["application/json"],"User-Agent":["elasticsearch-php/6.7.1 (Linux 4.15.0-64-generic, PHP 7.3.9-1+ubuntu18.04.1+deb.sury.org+1)"]},"HTTP code":null,"duration":0.004821,"error":"cURL error 7: Failed to connect to localhost port 9200: Connection refused"} 
+[2020-06-17 01:21:56] local.WARNING: Response [null] 
+[2020-06-17 01:21:56] local.WARNING: Marking node localhost:9200 dead.  
+[2020-06-17 01:21:56] local.WARNING: Retries left? true  
+[2020-06-17 01:21:56] local.CRITICAL: No alive nodes found in cluster  
+[2020-06-17 01:34:18] local.ERROR: Command "tinkercurl" is not defined. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"tinkercurl\" is not defined. at /home/vagrant/Code/laravel-shop/vendor/symfony/console/Application.php:669)
+[stacktrace]
+#0 /home/vagrant/Code/laravel-shop/vendor/symfony/console/Application.php(235): Symfony\\Component\\Console\\Application->find('tinkercurl')
+#1 /home/vagrant/Code/laravel-shop/vendor/symfony/console/Application.php(147): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /home/vagrant/Code/laravel-shop/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /home/vagrant/Code/laravel-shop/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /home/vagrant/Code/laravel-shop/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2020-06-17 02:10:53] local.DEBUG: Request Body [null] 
+[2020-06-17 02:10:53] local.INFO: Request Success: {"method":"GET","uri":"http://localhost:9200/","headers":{"Host":["localhost:9200"],"Content-Type":["application/json"],"Accept":["application/json"],"User-Agent":["elasticsearch-php/6.7.1 (Linux 4.15.0-64-generic, PHP 7.3.9-1+ubuntu18.04.1+deb.sury.org+1)"]},"HTTP code":200,"duration":0.008517} 
+[2020-06-17 02:10:53] local.DEBUG: Response [{"name":"homestead","cluster_name":"elasticsearch","cluster_uuid":"-at0rrPfRT6_AeNbFVpXbw","version":{"number":"7.4.2","build_flavor":"default","build_type":"deb","build_hash":"2f90bbf7b93631e52bafb59b3b049cb44ec25e96","build_date":"2019-10-28T20:40:44.881551Z","build_snapshot":false,"lucene_version":"8.2.0","minimum_wire_compatibility_version":"6.8.0","minimum_index_compatibility_version":"6.0.0-beta1"},"tagline":"You Know, for Search"}] 
+[2020-06-17 02:13:13] local.DEBUG: Request Body [null] 
+[2020-06-17 02:13:13] local.INFO: Request Success: {"method":"GET","uri":"http://localhost:9200/","headers":{"Host":["localhost:9200"],"Content-Type":["application/json"],"Accept":["application/json"],"User-Agent":["elasticsearch-php/6.7.1 (Linux 4.15.0-64-generic, PHP 7.3.9-1+ubuntu18.04.1+deb.sury.org+1)"]},"HTTP code":200,"duration":0.001434} 
+[2020-06-17 02:13:13] local.DEBUG: Response [{"name":"homestead","cluster_name":"elasticsearch","cluster_uuid":"-at0rrPfRT6_AeNbFVpXbw","version":{"number":"7.4.2","build_flavor":"default","build_type":"deb","build_hash":"2f90bbf7b93631e52bafb59b3b049cb44ec25e96","build_date":"2019-10-28T20:40:44.881551Z","build_snapshot":false,"lucene_version":"8.2.0","minimum_wire_compatibility_version":"6.8.0","minimum_index_compatibility_version":"6.0.0-beta1"},"tagline":"You Know, for Search"}] 
